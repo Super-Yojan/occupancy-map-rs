@@ -1,0 +1,25 @@
+[package]
+name = "occupancy-map-rs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+description = "Log-odds 2D occupancy grid mapping from metric optical-axis depth, camera intrinsics, and camera-to-world poses"
+license = "MIT"
+repository = "https://github.com/Super-Yojan/occupancy-map-rs"
+readme = "README.md"
+keywords = ["robotics", "occupancy-grid", "mapping", "depth", "raycast"]
+categories = ["science::robotics", "algorithms"]
+exclude = ["yolo26n-depth.onnx", ".pi-lens.json"]
+
+[lib]
+name = "rover_occupancy"
+
+[dependencies]
+
+[dev-dependencies]
+image = { version = "0.25", default-features = false }
+minifb = "0.28"
+nokhwa = { version = "0.10", features = ["input-native"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ultralytics-inference = "0.0.48"
