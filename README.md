@@ -1,7 +1,7 @@
-# rover-occupancy
+# Occupancy Map
 
 [![crates.io](https://img.shields.io/crates/v/occupancy-map-rs.svg)](https://crates.io/crates/occupancy-map-rs)
-[![docs.rs](https://docs.rs/rover_occupancy/badge.svg)](https://docs.rs/rover_occupancy)
+[![docs.rs](https://docs.rs/occupancy-map-rs/badge.svg)](https://docs.rs/occupancy-map-rs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A small, transport-independent Rust library that accumulates a fixed 2D occupancy map from **metric optical-axis depth**, depth-aligned camera intrinsics, and a camera-to-world pose. It makes a local map; it does not estimate pose or solve SLAM.
