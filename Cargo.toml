@@ -12,7 +12,7 @@ categories = ["science::robotics", "algorithms"]
 exclude = ["yolo26n-depth.onnx", ".pi-lens.json"]
 
 [lib]
-name = "rover_occupancy"
+name = "occupancy-map-rs"
 
 [dependencies]
 

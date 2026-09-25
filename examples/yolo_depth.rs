@@ -174,24 +174,24 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         );
 
         // Print a coarse ASCII view of the grid every 30 frames (~10 s).
-        if frame_count.is_multiple_of(30) {
-            let grid = mapper.snapshot();
-            for row in grid.cells.chunks(grid.width_cells).step_by(5) {
-                let line: String = row
-                    .iter()
-                    .step_by(5)
-                    .map(|&p: &i8| match p {
-                        -1 => '.',
-                        p if p >= 65 => '#',
-                        _ => ' ',
-                    })
-                    .collect();
-                println!("|{line}|");
-            }
+        // if frame_count.is_multiple_of(30) {
+        let grid = mapper.snapshot();
+        for row in grid.cells.chunks(grid.width_cells).step_by(5) {
+            let line: String = row
+                .iter()
+                .step_by(5)
+                .map(|&p: &i8| match p {
+                    -1 => '.',
+                    p if p >= 65 => '#',
+                    _ => ' ',
+                })
+                .collect();
+            println!("|{line}|");
         }
-        if frame_count >= 300 || !window.is_open() {
-            break;
-        }
+        // }
+        // if frame_count >= 300 || !window.is_open() {
+        //     break;
+        // }
     }
     Ok(())
 }
